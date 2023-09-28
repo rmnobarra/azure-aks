@@ -19,9 +19,8 @@ jobs:
       run: pip install checkov
       
     - name: Run Checkov
-      #run: checkov -d . --soft-fail
-      run: checkov -d .
-      
+      run: checkov -d . --soft-fail
+    
   terraform:
     needs: checkov-scan
     runs-on: ubuntu-latest
